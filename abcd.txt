@@ -1,0 +1,9 @@
+docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:8.0.25
+docker run --name mysql_qa -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:8.0.25
+
+create datbase python_db
+python manage.py migrate
+python manage.py createsuperuser
+shusain/password
+
+docker run -it  --rm mysql mysql -h10.50.79.89 -uroot -p
